@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "declaration": false,
+    "lib": ["es5", "es6", "dom", "scripthost"],
+    "jsx": "react",
+    "types": ["node", "reflect-metadata"],
+    "skipLibCheck": false,
+    "pretty": true,
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@core/*": ["./src/core/*"],
+      "@containers/*": ["./src/containers/*"],
+      "@enhances/*": ["./src/enhances/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@dummies/*": ["./src/dummies/*"],
+      "@static/*": ["./src/static/*"],
+      "@test-helper/*": ["./src/__tests__/test-helper/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "script",
+    "static",
+    ".storybook",
+    ".vscode",
+    "src/dummies",
+    "config",
+    ".awcache"
+}
