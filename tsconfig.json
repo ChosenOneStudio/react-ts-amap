@@ -27,13 +27,5 @@
       "@test-helper/*": ["./src/__tests__/test-helper/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "script",
-    "static",
-    ".storybook",
-    ".vscode",
-    "src/dummies",
-    "config",
-    ".awcache"
+  "exclude": ["node_modules", "script", "static", ".storybook", ".vscode", "src/dummies", "config", ".awcache"]
 }
