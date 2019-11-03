@@ -2,21 +2,21 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.min.js'
+    filename: 'bundle.min.js',
   },
-  mode: "development",
-  devtool: "source-map",
+  mode: 'development',
+  devtool: 'source-map',
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json", ".css"],
+    extensions: ['.ts', '.tsx', '.js', '.json', '.css'],
     alias: {
-      "@core": path.resolve(__dirname, "src", "core"),
-      "@containers": path.resolve(__dirname, "src", "containers"),
-      "@enhances": path.resolve(__dirname, "src", "enhances"),
-      "@components": path.resolve(__dirname, "src", "components"),
-    }
+      '@core': path.resolve(__dirname, 'src', 'core'),
+      '@containers': path.resolve(__dirname, 'src', 'containers'),
+      '@enhances': path.resolve(__dirname, 'src', 'enhances'),
+      '@components': path.resolve(__dirname, 'src', 'components'),
+    },
   },
   module: {
     rules: [
@@ -25,24 +25,24 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'awesome-typescript-loader'
-          }
-        ]
+            loader: 'awesome-typescript-loader',
+          },
+        ],
       },
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js$/,
-        loader: "source-map-loader"
-      }
-    ]
+        loader: 'source-map-loader',
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
-    })
+      template: './index.html',
+    }),
   ],
   externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
-  }
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
 };
